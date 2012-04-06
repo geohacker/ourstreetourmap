@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+   <link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.css" />
+    <script src="http://code.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+      <link href="css/slides.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="map" class="map" style="height: 300px"></div>
+<script type="text/javascript">
+var map = new L.Map('map');
+var mapquestUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+subDomains = ['otile1','otile2','otile3','otile4'],
+mapquestAttrib = 'OpenStreetMap, MapQuest and Leaflet'
+var mapquest = new L.TileLayer(mapquestUrl, {maxZoom: 18, attribution: mapquestAttrib, subdomains: subDomains});
+
+
+var london = new L.LatLng(51.505, -0.09); // geographical point (longitude and latitude)
+map.setView(london, 13).addLayer(mapquest);
+</script>
+
+<div id="since-2009" class="step" data-x="0" data-y="0">
+        <q>Depuis <b class="hl">2009</b></q>
+    </div>
+
+    <div id="clients" class="step" data-x="2000" data-y="0" data-rotate="90" data-scale="2">
+        <q>Vous</q>
+
+        <ul class="grid">
+            <li><a href="http://choosit.com/" title="ChoosIt"><img src="img/clients/choosit.png" alt="ChoosIt" /></a></li>
+            <li><a href="http://www.hima360.com/" title="hima360"><img src="img/clients/hima360.png" alt="hima360" /></a></li>
+            <li><a href="http://www.k-techno.fr/" title="K Technologies"><img src="img/clients/ktechno.png" alt="K Technologies" /></a></li>
+            <li><a href="http://pycna.com/" title="Pycna"><img src="img/clients/pycna.png" alt="Pycna" /></a></li>
+            <li><a href="http://www.pyxis.org/" title="Pyxis"><img src="img/clients/pyxis.png" alt="Pyxis" /></a></li>
+            <li><a href="http://www.troiscube.com/" title="TroisCube"><img src="img/clients/troiscube.png" alt="TroisCube" /></a></li>
+            <li class="more">...</li>
+
+        </ul>
+    </div>
+
+
+</body>
+</html>

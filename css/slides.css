@@ -1,0 +1,649 @@
+/**
+ * This is a stylesheet for a demo presentation for impress.js
+ * 
+ * It is not meant to be a part of impress.js and is not required by impress.js.
+ * I expect that anyone creating a presentation for impress.js would create their own
+ * set of styles.
+ */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+body {
+	color: #000;
+    font-family: Arial, sans-serif;
+    
+    min-height: 740px;
+
+    background: rgb(255, 255, 255) url(../img/background/connect.png) repeat center center;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+b, strong { font-weight: bold }
+i, em { font-style: italic}
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+nav {
+   height: 23px;
+}
+nav a {
+	border-radius: 0;
+    color: inherit;
+    display: block;
+	font-size: .8em;
+	padding: 0;
+	position: fixed;
+	text-decoration: none;
+	text-shadow: none;
+	
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+nav a.back {
+	left: 0;
+	padding: 5px 10px;
+	top: 0;
+	width: 120px;
+}
+nav a.back span {
+	display: inline-block;
+	height: 13px;
+	overflow: hidden;
+	width: 0px;
+	
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+nav a.back:hover span {
+    width: 100px;
+}
+nav a.credits {
+    right: 0;
+    top: 0;
+	padding: 5px 10px;
+}
+nav a.credits:hover {
+    text-decoration: underline;
+}
+
+#map {
+    position: absolute;
+    z-index:1;
+}
+/* COMMON STEP STYLES */
+
+.step {
+	color: #0d0b0d;
+	
+    width: 900px;
+    padding: 40px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'Ruluko', sans-serif;
+
+    font-size: 48px;
+    line-height: 1.5;
+    z-index:9999;
+}
+.impress-not-supported .step {
+	clear: both;
+}
+
+/* fade out inactive slides */
+
+.step {
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.hl {
+    color: #500000;
+    font-family: 'HarabaraRegular', sans-serif;
+}
+
+ul.grid {
+    list-style: none;
+    margin: auto;
+    width: 582px;
+}
+ul.grid li:not(.more) {
+    background: #fff;
+    border: 5px solid #d9d9d9;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0, 0.7);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    float: left;
+    height: 150px;
+    margin: 15px;
+    position: relative;
+	text-align: center;
+    width: 150px;
+	
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+ul.grid li:not(.more):before {
+    background: transparent;
+    border: 1px solid #d9d9d9;
+    content: "";
+	float: left;
+    height: 144px;
+	margin: 2px 2px 2px 1px;
+    position: absolute;
+    width: 144px;
+	z-index: -1;
+}
+ul.grid li:not(.more):hover {
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0, 0.9);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+}
+ul.grid li:not(.more):hover,
+ul.grid li:not(.more):hover:before {
+    border-color: #c9c9c9;
+}
+ul.grid li:not(.more) a,
+ul.grid li:not(.more) a img {
+	display: block;
+}
+ul.grid li:not(.more) a {
+	padding: 5px;
+}
+ul.grid li.more {
+	clear: left;
+	float: right;
+	line-height: .5em;
+}
+
+ul.grid li:nth-child(3n+1) {
+    clear: left;
+}
+
+/* STEP SPECIFIC STYLES */
+
+/* hint on the first slide */
+
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    
+    background: rgba(0,0,0,0.4);
+    color: #EEE;
+    text-align: center;
+    
+    font-size: 40px;
+    padding: 20px;
+    
+    z-index: 100;
+    
+    opacity: 0;
+    
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+.step-since-2009 + .hint {
+    opacity: 1;
+    
+    -webkit-transition: opacity 1s 2s, -webkit-transform 0.5s;
+    -moz-transition:    opacity 1s 2s,    -moz-transform 0.5s;
+    -ms-transition:     opacity 1s 2s,     -ms-transform 0.5s;
+    -o-transition:      opacity 1s 2s,      -o-transform 0.5s;
+    transition:         opacity 1s 2s,         transform 0.5s;
+    
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+}
+
+/* STEP 01 since */
+#since-2009 {
+    font-size: 4em;
+    text-align: center;
+}
+#since-2009 b {
+    display: block;
+    font-size: 2em;
+}
+
+/* STEP 02 clients */
+#clients {
+    
+}
+
+/* STEP 03 skills */
+#skills {
+    
+}
+
+/* STEP 04 projects */
+#projects {
+	
+}
+
+/* STEP 05 stabilization */
+#stabilization {
+    
+}
+#stabilization span {
+    display: block;
+}
+#stabilization span.delay {
+	opacity: 0;
+
+    -webkit-transition: all 1000ms cubic-bezier(0.445, 0.250, 0.000, 1); /* older webkit */
+    -webkit-transition: all 1000ms cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+       -moz-transition: all 1000ms cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+        -ms-transition: all 1000ms cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+         -o-transition: all 1000ms cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+            transition: all 1000ms cubic-bezier(0.445, 0.250, 0.000, 1.275); /* custom */
+    
+    -webkit-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1); /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+       -moz-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+        -ms-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+         -o-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+            transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); /* custom */
+}
+#stabilization.active span.delay,
+.step-status #stabilization span.delay,
+.impress-not-supported #stabilization span.delay {
+    opacity: 1;
+}
+#stabilization.active span.delay.first {
+    -webkit-transition-delay: 0.7s;
+    -moz-transition-delay:    0.7s;
+    -ms-transition-delay:     0.7s;
+    -o-transition-delay:      0.7s;
+    transition-delay:         0.7s;
+}
+#stabilization.active span.delay.second {
+    -webkit-transition-delay: 1.2s;
+    -moz-transition-delay:    1.2s;
+    -ms-transition-delay:     1.2s;
+    -o-transition-delay:      1.2s;
+    transition-delay:         1.2s;
+}
+
+/* STEP 06 status */
+#status {
+    
+}
+#status .hl {
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* STEP 07 eirl */
+#eirl {
+	letter-spacing: .05em;
+	line-height: 1.3em;
+	font-size: 1em;
+	text-align: center;
+
+	opacity: 0;
+	-webkit-transition: all 500ms cubic-bezier(0.445, 0.250, 0.000, 1); /* older webkit */
+	-webkit-transition: all 500ms cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+	   -moz-transition: all 500ms cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+	    -ms-transition: all 500ms cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+	     -o-transition: all 500ms cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+	        transition: all 500ms cubic-bezier(0.445, 0.250, 0.000, 1.275); /* custom */
+	
+	-webkit-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1); /* older webkit */
+	-webkit-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+	   -moz-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+	    -ms-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+	     -o-transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); 
+	        transition-timing-function: cubic-bezier(0.445, 0.250, 0.000, 1.275); /* custom */
+}
+#eirl.active,
+.impress-not-supported #eirl {
+	opacity: 1;
+	font-size: 7em;
+	
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay:    0.5s;
+    -ms-transition-delay:     0.5s;
+    -o-transition-delay:      0.5s;
+    transition-delay:         0.5s;
+}
+
+/* STEP 08 identity */
+#identity {
+	
+}
+#identity .hl {
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* STEP 09 logo */
+#logo {
+    text-align: center;
+    padding: 0;
+}
+
+/* STEP 10 my-turn */
+#my-turn {
+	text-align: center;
+}
+
+/* STEP 11 happy-2012 */
+#happy-2012 {
+	padding-top: 100px;
+    text-align: center;
+}
+#happy-2012 .hl {
+    display: block;
+    font-size: 1.5em;
+}
+#happy-2012 .voeux {
+}
+#happy-2012 .voeux .item {
+	display: block;
+	font-size: .8em;
+	opacity: .7;
+	position: absolute;
+	text-align: center;
+	width: 25%;
+}
+#happy-2012 .voeux .item:before {
+	content: "^";
+	font-size: .5em;
+	left: 50%;
+	opacity: .5;
+	position: absolute;
+	top: -30px;
+}
+#happy-2012 .voeux .item-1 {
+    bottom: -40px;
+    left: 0px;
+    
+    -moz-animation: item1 4s 0.5s infinite normal ease;
+    -webkit-animation: item1 4s 0.5s infinite normal ease;
+    -ms-animation: item1 4s 0.5s infinite normal ease;
+}
+@-moz-keyframes item1 {
+    0%   { -moz-transform: rotate(10deg); left: 0px; }
+    50%  { -moz-transform: rotate(-10deg); left: 10px; }
+    100% { -moz-transform: rotate(10deg); left: 0px; }
+}
+@-webkit-keyframes item1 {
+    0%   { -webkit-transform: rotate(10deg); left: 0px; }
+    50%  { -webkit-transform: rotate(-10deg); left: 10px; }
+    100% { -webkit-transform: rotate(10deg); left: 0px; }
+}
+@-ms-keyframes item1 {
+    0%   { -ms-transform: rotate(10deg); left: 0px; }
+    50%  { -ms-transform: rotate(-10deg); left: 10px; }
+    100% { -ms-transform: rotate(10deg); left: 0px; }
+}
+#happy-2012 .voeux .item-2 {
+    bottom: -90px;
+    left: 230px;
+    
+    -moz-animation: item2 4s 0s infinite normal ease;
+    -webkit-animation: item2 4s 0s infinite normal ease;
+    -ms-animation: item2 4s 0s infinite normal ease;
+}
+@-moz-keyframes item2 {
+    0%   { -moz-transform: rotate(-10deg); left: 230px; }
+    50%  { -moz-transform: rotate(10deg); left: 210px; }
+    100% { -moz-transform: rotate(-10deg); left: 230px; }
+}
+@-webkit-keyframes item2 {
+    0%   { -webkit-transform: rotate(-10deg); left: 230px; }
+    50%  { -webkit-transform: rotate(10deg); left: 210px; }
+    100% { -webkit-transform: rotate(-10deg); left: 230px; }
+}
+@-ms-keyframes item2 {
+    0%   { -ms-transform: rotate(-10deg); left: 230px; }
+    50%  { -ms-transform: rotate(10deg); left: 210px; }
+    100% { -ms-transform: rotate(-10deg); left: 230px; }
+}
+#happy-2012 .voeux .item-3 {
+    bottom: -50px;
+    right: 250px;
+    
+    -moz-animation: item3 4s 0.3s infinite normal ease;
+    -webkit-animation: item3 4s 0.3s infinite normal ease;
+    -ms-animation: item3 4s 0.3s infinite normal ease;
+}
+@-moz-keyframes item3 {
+    0%   { -moz-transform: rotate(10deg); right: 250px; }
+    50%  { -moz-transform: rotate(-10deg); right: 240px; }
+    100% { -moz-transform: rotate(10deg); right: 250px; }
+}
+@-webkit-keyframes item3 {
+    0%   { -webkit-transform: rotate(10deg); right: 250px; }
+    50%  { -webkit-transform: rotate(-10deg); right: 240px; }
+    100% { -webkit-transform: rotate(10deg); right: 250px; }
+}
+@-ms-keyframes item3 {
+    0%   { -ms-transform: rotate(10deg); right: 250px; }
+    50%  { -ms-transform: rotate(-10deg); right: 240px; }
+    100% { -ms-transform: rotate(10deg); right: 250px; }
+}
+#happy-2012 .voeux .item-4 {
+	bottom: -80px;
+	right: -10px;
+	
+	-moz-animation: item4 4s 0 infinite normal ease;
+    -webkit-animation: item4 4s 0 infinite normal ease;
+    -ms-animation: item4 4s 0 infinite normal ease;
+}
+@-moz-keyframes item4 {
+    0%   { -moz-transform: rotate(-10deg); right: -10px; }
+    50%  { -moz-transform: rotate(10deg); right: 10px; }
+    100% { -moz-transform: rotate(-10deg); right: -10px; }
+}
+@-webkit-keyframes item4 {
+    0%   { -webkit-transform: rotate(-10deg); right: -10px; }
+    50%  { -webkit-transform: rotate(10deg); right: 10px; }
+    100% { -webkit-transform: rotate(-10deg); right: -10px; }
+}
+@-ms-keyframes item4 {
+    0%   { -ms-transform: rotate(-10deg); right: -10px; }
+    50%  { -ms-transform: rotate(10deg); right: 10px; }
+    100% { -ms-transform: rotate(-10deg); right: -10px; }
+}
+
+/* STEP 12 credits */
+#credits {
+}
+.impress-not-supported #credits {
+	margin: 300px auto;
+}
+#credits p {
+	font-size: .4em;
+	margin: 50px auto;
+	width: 550px;
+}
+.html5-logos {
+	text-align: center;
+}
+
+/* Opacities */
+.step:not(.active) {
+    opacity: 0.2;
+}
+
+.step-stabilization #status {
+    opacity: 0;
+}
+
+.step-identity #happy-2012 {
+    opacity: 0;
+}
+.step-identity #eirl {
+    opacity: 0.2;
+    font-size: 7em;
+}
+
+.step-logo .step {
+    opacity: 0;
+}
+.step-logo #logo {
+    opacity: 1;
+}
+
+.step-happy-2012 .step {
+    opacity: 0;
+}
+.step-happy-2012 #happy-2012,
+.step-happy-2012 #logo {
+    opacity: 1;
+}
+
+.step-credits .step {
+    opacity: 0;
+}
+.step-credits #credits {
+    opacity: 1;
+}
+
+/* overview step */
+
+#overview {
+    z-index: -1;
+    padding: 0;
+}
+
+/* on overview step everything is visible */
+
+#impress.step-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* IMPRESS NOT SUPPORTED STYLES */
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+    
+    display: none;
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    border: 1px solid #E4C652;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-not-supported .step {
+    position: relative;
+    opacity: 1;
+    margin: 20px auto;
+}
+
+.impress-not-supported .fallback-message {
+    display: block;
+}
+
