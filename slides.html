@@ -23,7 +23,7 @@ right = new L.Point(5000,1000);
 left = new L.Point(-5000,-10);
 
 var london = new L.LatLng(51.505, -0.09); // geographical point (longitude and latitude)
-map.setView(london, 13).addLayer(mapquest);
+// map.setView(london, 13).addLayer(mapquest);
 var bangalore = new L.LatLng(12.978, 77.588);
 var delhi = new L.LatLng(28.64, 77.22);
 var mumbai = new L.LatLng(19.04, 72.90);
@@ -48,14 +48,14 @@ var changhua = new L.LatLng(23.941, 120.56);
             $("#slide-"+i).show();
             z = Math.floor(Math.random()* (18 - 6) + 6);
             console.log(z);
-            map.setView(cities[i],z);
+            // map.setView(cities[i],z);
           }
           else if(event.keyCode==37) {
             i=i-1;
             $('#slides div').hide(); // Hide all divs
             $("#slide-"+i).show();
             z = Math.floor(Math.random()* (18 - 6) + 6);
-            map.setView(cities[i],z);
+            // map.setView(cities[i],z);
           };
  
    });
@@ -112,6 +112,67 @@ var changhua = new L.LatLng(23.941, 120.56);
 <div id="slide-10" class="slide">
 <h1> Maps can tell stories! </h1>
 </div>
+
+
+<div id="slide-11" class="image">
+<h1>What is </h1>
+<img src="images/osm.png" />
+</div>
+
+<div id="slide-12" class="slide">
+<h1> Most maps you think free have restrictions on their usage.</h1>
+</div>
+
+<div id="slide-13" class="slide">
+<h1> Four freedoms; Granted</h1>
+<p><img src="images/use.png" />
+<img src="images/learn.png" /></p>
+<p><img src="images/hack.png" />
+<img src="images/share.png" /></p>
+</div>
+
+
+<div id="slide-14" class="slide">
+<h1>ODbL</h1>
+</div>
+
+<div id="slide-15" class="slide">
+<h1>Why OpenStreetMap?</h1>
+</div>
+
+<div id="slide-16" class="slide">
+<h1>Who owns the data? <br>
+You!
+</h1>
+</div>
+
+<div id="slide-17" class="slide">
+<h1>Why OpenStreetMap?</h1>
+</div>
+
+<div id="slide-18" class="slide">
+<h1>Show Google maps screw ups.</h1>
+</div>
+
+<div id="slide-19" class="slide">
+<h1>Crowd-source!</h1>
+</div>
+
+<div id="slide-20" class="slide">
+<h1>Spatial data beurocracy.</h1>
+</div>
+
+<div id="slide-21" class="slide">
+<h1>WTF is Neogeography?</h1>
+</div>
+
+<div id="slide-22" class="slide">
+<h1>Responding to a crisis. - HOT</h1>
+</div>
+
+
+
+
 
 </div>
 
