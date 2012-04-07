@@ -1,15 +1,8 @@
-/**
- * This is a stylesheet for a demo presentation for impress.js
- * 
- * It is not meant to be a part of impress.js and is not required by impress.js.
- * I expect that anyone creating a presentation for impress.js would create their own
- * set of styles.
- */
+/*
+Stylesheet for Our Street Our Map presentaion
+Sajjad Anwar
+Sumandro C
 
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -64,8 +57,6 @@ body {
     font-family: Arial, sans-serif;
     
     min-height: 740px;
-
-    background: rgb(255, 255, 255) url(../img/background/connect.png) repeat center center;
 
     -webkit-font-smoothing: antialiased;
 }
@@ -149,15 +140,31 @@ nav a.credits:hover {
     /*top:100%;*/
     z-index:1;
     /*border-top: 1px solid #ccc;*/
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    filter:alpha(opacity=7);
 }
 
-#slides {
+.slides {
     position: absolute;
-    left:40%;
-    top:50%;
+    left:20%;
     z-index:10;
+    line-height: 5em;
 }
 
-#slides h1 {
+.slides h1 {
     font-size:5em;
 }
+
+.slides h2 {
+    font-size:2em;
+}
+
+.slide {
+    padding-top:200px;
+}
+
+.image {
+padding-top: 40px;
+}
+
