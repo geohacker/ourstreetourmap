@@ -19,8 +19,8 @@ var mapquestUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
 subDomains = ['otile1','otile2','otile3','otile4'],
 mapquestAttrib = 'OpenStreetMap, MapQuest and Leaflet'
 var mapquest = new L.TileLayer(mapquestUrl, {maxZoom: 18, attribution: mapquestAttrib, subdomains: subDomains});
-right = new L.Point(10,10);
-left = new L.Point(-10,-10);
+right = new L.Point(5000,1000);
+left = new L.Point(-5000,-1000);
 
 var london = new L.LatLng(51.505, -0.09); // geographical point (longitude and latitude)
 map.setView(london, 13).addLayer(mapquest);
@@ -29,18 +29,18 @@ var bangalore = new L.LatLng(12.9,75.0);
 
 <script type="text/javascript">
  $(document).ready(function() {
-    var i=0;
+    var i=1;
     var divNames = new Array();
     divNames = "slide-1","slide-2","slide-3";
 
     $('#slides div').hide(); // Hide all divs
+    $('#slide-1').show(); // Show the first div
    $(document).keypress(function(event) {
          if (event.keyCode==39) {
             i=i+1;
             $('#slides div').hide(); // Hide all divs
             $("#slide-"+i).show();
-            map.panBy(right);
-            // $('#slides div:first').show(); // Show the first div
+            map.panTo(bangalore);
           }
           else if(event.keyCode==37) {
             i=i-1;
