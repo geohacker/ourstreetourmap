@@ -142,7 +142,7 @@ nav a.credits:hover {
 }
 
 #map {
-    position: absolute;
+    position: static;
     z-index:1;
 }
 /* COMMON STEP STYLES */
@@ -151,8 +151,6 @@ nav a.credits:hover {
 	color: #0d0b0d;
 	
     width: 900px;
-    padding: 40px;
-
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
     -ms-box-sizing:     border-box;
@@ -163,7 +161,7 @@ nav a.credits:hover {
 
     font-size: 48px;
     line-height: 1.5;
-    z-index:9999;
+    z-index:10;
 }
 .impress-not-supported .step {
 	clear: both;
