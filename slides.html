@@ -28,11 +28,23 @@ var bangalore = new L.LatLng(12.9,75.0);
 
 <script type="text/javascript">
  $(document).ready(function() {
+    var i=0;
+    var divNames = new Array();
+    divNames = "slide-1","slide-2","slide-3";
+
+    $('#slides div').hide(); // Hide all divs
    $(document).keypress(function(event) {
          if (event.keyCode==39) {
+            i=i+1;
+            $('#slides div').hide(); // Hide all divs
+            $("#slide-"+i).show();
             map.panBy(right);
+            // $('#slides div:first').show(); // Show the first div
           }
           else if(event.keyCode==37) {
+            i=i-1;
+            $('#slides div').hide(); // Hide all divs
+            $("#slide-"+i).show();
             map.panBy(left);
           };
  
@@ -40,5 +52,19 @@ var bangalore = new L.LatLng(12.9,75.0);
  });
  </script>
 
+<div id="slides">
+<div id="slide-1" >
+<h1> This is slide 1 </h1>
+</div>
+
+<div id="slide-2" >
+<h1> This is slide 2 </h1>
+</div>
+
+<div id="slide-3" >
+<h1> This is slide 3 </h1>
+</div>
+
+</div>
 </body>
 </html>
