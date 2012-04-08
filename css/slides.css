@@ -135,37 +135,79 @@ nav a.credits:hover {
 #map {
     position: absolute;
     /*left:50%;*/
-    height:1000px;
+    height:800px;
     width:100%;
     /*top:100%;*/
     z-index:1;
     /*border-top: 1px solid #ccc;*/
-    opacity: 0.7;
+    opacity: 0.6;
     -moz-opacity: 0.7;
     filter:alpha(opacity=7);
 }
-
+/*
 .slides {
     position: absolute;
     left:20%;
     z-index:10;
-    line-height: 5em;
+    line-height: 3.5em;
+}
+*/
+#title {
+   /* line-height: 3em;*/
+    /*padding-top:200px;*/
+    /*font-size:1.3em;*/
+    font-family: 'Patua One', cursive;
+    text-shadow: #ccd 2px 5px 2px;
+    background: url("/images/title.png") no-repeat;
+    
 }
 
-.slides h1 {
-    font-size:5em;
+.title h2 {
+    font-size: 0.6em;
+}
+
+/*.slides h1 {
+    font-size:3em;
 }
 
 .slides h2 {
     font-size:2em;
 }
+*/
+#slide {
+    font-family:"Oxygen";
+    /*font-family:"Shadows Into Light Two";*/
+    /*padding-top:200px;*/
+    /*width:100%;*/
+    text-shadow: #ccd 2px 5px 2px;
 
-.slide {
-    padding-top:200px;
-    width:90%;
 }
 
+#big {
+    font-size:100px;
+    font-color:white;
+}
 .image {
+font-family:"Oxygen";
 padding-top: 40px;
 }
 
+.whois {
+       background: url("/images/watercolor1.png") no-repeat;
+
+}
+
+#mumbai {
+    font-family:"Oxygen";
+    text-shadow: #ccd 0px 0px 0px;
+
+}
+
+#builder {
+    font-size:80px;
+    line-height:1.5em;
+}
+
+#osm {
+    margin-top:180px;
+}
