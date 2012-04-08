@@ -23,7 +23,7 @@ right = new L.Point(5000,1000);
 left = new L.Point(-5000,-10);
 
 var london = new L.LatLng(51.505, -0.09); // geographical point (longitude and latitude)
-// map.setView(london, 13).addLayer(mapquest);
+map.setView(london, 13).addLayer(mapquest);
 var bangalore = new L.LatLng(12.978, 77.588);
 var delhi = new L.LatLng(28.64, 77.22);
 var mumbai = new L.LatLng(19.04, 72.90);
@@ -48,14 +48,14 @@ var changhua = new L.LatLng(23.941, 120.56);
             $("#slide-"+i).show();
             z = Math.floor(Math.random()* (18 - 6) + 6);
             console.log(z);
-            // map.setView(cities[i],z);
+            map.setView(cities[i],z);
           }
           else if(event.keyCode==37) {
             i=i-1;
             $('#slides div').hide(); // Hide all divs
             $("#slide-"+i).show();
             z = Math.floor(Math.random()* (18 - 6) + 6);
-            // map.setView(cities[i],z);
+            map.setView(cities[i],z);
           };
  
    });
@@ -147,7 +147,7 @@ You!
 </div>
 
 <div id="slide-17" class="slide">
-<h1>Why OpenStreetMap?</h1>
+<h1>Volunteered Geographic Information</h1>
 </div>
 
 <div id="slide-18" class="slide">
@@ -171,6 +171,21 @@ You!
 </div>
 
 
+<div id="slide-23" class="slide">
+<h1>OpenStreetMap objects</h1>
+</div>
+
+<div id="slide-24" class="slide">
+<h1>Data Model</h1>
+</div>
+
+<div id="slide-25" class="slide">
+<h1>Tag System</h1>
+</div>
+
+<div id="slide-25" class="slide">
+<h1>Editors</h1>
+</div>
 
 
 
