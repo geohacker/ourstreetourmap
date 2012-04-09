@@ -11,7 +11,7 @@
 */
 
 // var PERMANENT_URL_PREFIX = '/home/geohacker/Projects/Latex-Workshop/slides/';
-var PERMANENT_URL_PREFIX = 'http://sajjad.in/content/slides/';
+var PERMANENT_URL_PREFIX = '.';
 var SLIDE_CLASSES = ['far-past', 'past', 'current', 'next', 'far-next'];
 
 var PM_TOUCH_SENSITIVITY = 15;
@@ -535,7 +535,7 @@ function addPrettify() {
   
   var el = document.createElement('script');
   el.type = 'text/javascript';
-  el.src = PERMANENT_URL_PREFIX + 'prettify.js';
+  el.src = PERMANENT_URL_PREFIX + '/js/prettify.js';
   el.onload = function() {
     prettyPrint();
   }
@@ -555,7 +555,7 @@ function addGeneralStyle() {
   var el = document.createElement('link');
   el.rel = 'stylesheet';
   el.type = 'text/css';
-  el.href = PERMANENT_URL_PREFIX + 'styles.css';
+  el.href = PERMANENT_URL_PREFIX + '/css/styles.css';
   document.body.appendChild(el);
   
   var el = document.createElement('meta');
