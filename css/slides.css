@@ -158,7 +158,7 @@ nav a.credits:hover {
     /*font-size:1.3em;*/
     font-family: 'Patua One', cursive;
     text-shadow: #ccd 2px 5px 2px;
-    background: url("/images/title.png") no-repeat;
+    background: url("../images/title.png") no-repeat;
     
 }
 
