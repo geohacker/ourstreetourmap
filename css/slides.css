@@ -1,8 +1,6 @@
 /*
 Stylesheet for Our Street Our Map presentaion
 Sajjad Anwar
-Sumandro C
-
 */
 
 html, body, div, span, applet, object, iframe,
@@ -214,4 +212,10 @@ padding-top: 40px;
 
 #bridge{
     padding-left:80px;
+}
+
+#credits {
+
+font-family: 'Belleza';
+        text-shadow: #ccd 0px 0px 0px;
 }
